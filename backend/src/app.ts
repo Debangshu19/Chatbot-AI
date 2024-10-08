@@ -11,7 +11,7 @@ app.use(express.json());
 
 //middlewares
 const corsOptions = {
-    origin: 'https://chatbot-ai-two.vercel.app/', // your frontend origin
+    origin: 'https://chatbot-ai-two.vercel.app', // your frontend origin
     credentials: true, // allow cookies to be sent
 };
 app.use(cors(corsOptions)); // Apply CORS to all routes
