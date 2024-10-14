@@ -26,7 +26,8 @@ export const userSignup = async (req, res, next) => {
         // create token and store cookie
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "https://chatbot-ai-two.vercel.app",
+            domain: 'https://chatbot-ai-5-2szm.onrender.com',
+            sameSite: 'None',
             signed: true,
             path: "/",
         });
@@ -35,7 +36,8 @@ export const userSignup = async (req, res, next) => {
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: "https://chatbot-ai-two.vercel.app",
+            domain: 'https://chatbot-ai-5-2szm.onrender.com',
+            sameSite: 'None',
             expires,
             httpOnly: true,
             signed: true,
@@ -64,7 +66,8 @@ export const userLogin = async (req, res, next) => {
         // create token and store cookie
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "https://chatbot-ai-two.vercel.app",
+            domain: 'https://chatbot-ai-5-2szm.onrender.com',
+            sameSite: 'None',
             signed: true,
             path: "/",
         });
@@ -73,7 +76,8 @@ export const userLogin = async (req, res, next) => {
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: "https://chatbot-ai-two.vercel.app",
+            domain: 'https://chatbot-ai-5-2szm.onrender.com',
+            sameSite: 'None',
             expires,
             httpOnly: true,
             signed: true,
@@ -118,7 +122,8 @@ export const userLogout = async (req, res, next) => {
         }
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "https://chatbot-ai-two.vercel.app",
+            domain: 'https://chatbot-ai-5-2szm.onrender.com',
+            sameSite: 'None',
             signed: true,
             path: "/",
         });
