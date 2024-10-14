@@ -8,8 +8,8 @@ export const configureGemini = () => {
     throw new Error('GEMINI_API_KEY is not set in environment variables');
   }
 
-  const geminiClient = new GoogleGenerativeAI(apiKey); // Create an instance with the API key
-  return geminiClient;
+  const configureGemini = new GoogleGenerativeAI(apiKey); // Create an instance with the API key
+  return configureGemini;
 };
 
 // OpenAI configuration example (commented out)
