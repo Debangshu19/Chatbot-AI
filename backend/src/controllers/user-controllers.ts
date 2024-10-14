@@ -36,6 +36,7 @@ export const userSignup = async (
     // create token and store cookie
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
+      domain: 'https://chatbot-ai-two.vercel.app',
       signed: true,
       path: "/",
     });
@@ -45,6 +46,7 @@ export const userSignup = async (
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
       path: "/",
+      domain: 'https://chatbot-ai-two.vercel.app',
       expires,
       httpOnly: true,
       signed: true,
@@ -80,6 +82,7 @@ export const userLogin = async (
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
+      domain: 'https://chatbot-ai-two.vercel.app',
       signed: true,
       path: "/",
     });
@@ -89,6 +92,7 @@ export const userLogin = async (
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
       path: "/",
+      domain: 'https://chatbot-ai-two.vercel.app',
       expires,
       httpOnly: true,
       signed: true,
@@ -143,6 +147,7 @@ export const userLogout = async (
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
+      domain: 'https://chatbot-ai-two.vercel.app',
       signed: true,
       path: "/",
     });
