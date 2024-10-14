@@ -1,12 +1,14 @@
-import app from "./app.js";
-import { connectToDatabase } from "./db/connection.js";
+import app from "./app"; // Remove the .js extension
+import { connectToDatabase } from "./db/connection"; // Remove the .js extension
 
-//connections and listeneres
+// Server Configuration
 const PORT = process.env.PORT || 5000;
+
+// Connect to the database and start the server
 connectToDatabase()
   .then(() => {
-    app.listen(PORT, () =>
-      console.log("Server Open & Connected To Database 🤟")
-    );
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT} and connected to the database 🤟`);
+    });
   })
-  .catch((err) => console.log(err));
+  .catch((err) => console.error("Failed to connect to the database", err));
